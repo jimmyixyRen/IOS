@@ -77,7 +77,7 @@
     //代理
     Car *mCar = [[Car alloc] init];
     mCar.delegate = self;//设置好代理
-    [mCar gotoSomePlace:@"家家悦超市"];
+    [mCar gotoSomePlace:@"家家悦超市 "];
     
     
 }
