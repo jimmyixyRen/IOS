@@ -60,8 +60,6 @@
     [super viewDidLoad];
     mCar = [[Car alloc] init];
     [mCar addObserver:self forKeyPath:@"name" options: NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    SEL myFunc = @selector(testSelector:arg2:);
-    
 }
 
 - (void)didReceiveMemoryWarning {
