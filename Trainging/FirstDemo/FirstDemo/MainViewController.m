@@ -42,7 +42,7 @@
 //    transition.subtype = kCATransitionFromTop;
 //    transition.delegate = self;
 //    [self.navigationController.view.layer addAnimation:transition forKey:nil];
-//    self.navigationController.navigationBarHidden = NO;
+//    self.navigationController.navigationBarHidden = NO; 
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

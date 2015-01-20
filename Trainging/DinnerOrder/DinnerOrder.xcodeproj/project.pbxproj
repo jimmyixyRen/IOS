@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BD283CD1A6E321B00625BB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283CC1A6E321B00625BB7 /* main.m */; };
+		8BD283D01A6E321B00625BB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283CF1A6E321B00625BB7 /* AppDelegate.m */; };
+		8BD283D31A6E321B00625BB7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283D21A6E321B00625BB7 /* ViewController.m */; };
+		8BD283D61A6E321B00625BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD283D41A6E321B00625BB7 /* Main.storyboard */; };
+		8BD283D81A6E321B00625BB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD283D71A6E321B00625BB7 /* Images.xcassets */; };
+		8BD283DB1A6E321B00625BB7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD283D91A6E321B00625BB7 /* LaunchScreen.xib */; };
+		8BD283E71A6E321B00625BB7 /* DinnerOrderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283E61A6E321B00625BB7 /* DinnerOrderTests.m */; };
+		8BD283F21A6E45D100625BB7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283F11A6E45D100625BB7 /* LoginViewController.m */; };
+		8BD283F51A6E46B100625BB7 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283F41A6E46B100625BB7 /* Util.m */; };
+		8BD283F81A6E4C8A00625BB7 /* RoomListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283F71A6E4C8A00625BB7 /* RoomListViewController.m */; };
+		8BD283FB1A6E4E4800625BB7 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283FA1A6E4E4800625BB7 /* Room.m */; };
+		DB16CA58114F8EFB0A051D1D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8E98B6D117EF292BF12362 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BD283E11A6E321B00625BB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD283BF1A6E321B00625BB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BD283C61A6E321B00625BB7;
+			remoteInfo = DinnerOrder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21164FF5F64BD613C87290EA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A8E98B6D117EF292BF12362 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD283C71A6E321B00625BB7 /* DinnerOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinnerOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD283CB1A6E321B00625BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD283CC1A6E321B00625BB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8BD283CE1A6E321B00625BB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8BD283CF1A6E321B00625BB7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8BD283D11A6E321B00625BB7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8BD283D21A6E321B00625BB7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8BD283D51A6E321B00625BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BD283D71A6E321B00625BB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8BD283DA1A6E321B00625BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8BD283E01A6E321B00625BB7 /* DinnerOrderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DinnerOrderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD283E51A6E321B00625BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BD283E61A6E321B00625BB7 /* DinnerOrderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DinnerOrderTests.m; sourceTree = "<group>"; };
+		8BD283F01A6E45D100625BB7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8BD283F11A6E45D100625BB7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8BD283F31A6E46B100625BB7 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		8BD283F41A6E46B100625BB7 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		8BD283F61A6E4C8A00625BB7 /* RoomListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomListViewController.h; sourceTree = "<group>"; };
+		8BD283F71A6E4C8A00625BB7 /* RoomListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomListViewController.m; sourceTree = "<group>"; };
+		8BD283F91A6E4E4800625BB7 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		8BD283FA1A6E4E4800625BB7 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		CE1BBCD656C428E04E0B0C5B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BD283C41A6E321B00625BB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB16CA58114F8EFB0A051D1D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD283DD1A6E321B00625BB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D9F56EFFA97576AB40F2635 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A8E98B6D117EF292BF12362 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BD283BE1A6E321B00625BB7 = {
+			isa = PBXGroup;
+			children = (
+				8BD283C91A6E321B00625BB7 /* DinnerOrder */,
+				8BD283E31A6E321B00625BB7 /* DinnerOrderTests */,
+				8BD283C81A6E321B00625BB7 /* Products */,
+				D90686EB1093F1F705676E40 /* Pods */,
+				3D9F56EFFA97576AB40F2635 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8BD283C81A6E321B00625BB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BD283C71A6E321B00625BB7 /* DinnerOrder.app */,
+				8BD283E01A6E321B00625BB7 /* DinnerOrderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BD283C91A6E321B00625BB7 /* DinnerOrder */ = {
+			isa = PBXGroup;
+			children = (
+				8BD283F91A6E4E4800625BB7 /* Room.h */,
+				8BD283FA1A6E4E4800625BB7 /* Room.m */,
+				8BD283F31A6E46B100625BB7 /* Util.h */,
+				8BD283F41A6E46B100625BB7 /* Util.m */,
+				8BD283F61A6E4C8A00625BB7 /* RoomListViewController.h */,
+				8BD283F71A6E4C8A00625BB7 /* RoomListViewController.m */,
+				8BD283F01A6E45D100625BB7 /* LoginViewController.h */,
+				8BD283F11A6E45D100625BB7 /* LoginViewController.m */,
+				8BD283CE1A6E321B00625BB7 /* AppDelegate.h */,
+				8BD283CF1A6E321B00625BB7 /* AppDelegate.m */,
+				8BD283D11A6E321B00625BB7 /* ViewController.h */,
+				8BD283D21A6E321B00625BB7 /* ViewController.m */,
+				8BD283D41A6E321B00625BB7 /* Main.storyboard */,
+				8BD283D71A6E321B00625BB7 /* Images.xcassets */,
+				8BD283D91A6E321B00625BB7 /* LaunchScreen.xib */,
+				8BD283CA1A6E321B00625BB7 /* Supporting Files */,
+			);
+			path = DinnerOrder;
+			sourceTree = "<group>";
+		};
+		8BD283CA1A6E321B00625BB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BD283CB1A6E321B00625BB7 /* Info.plist */,
+				8BD283CC1A6E321B00625BB7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BD283E31A6E321B00625BB7 /* DinnerOrderTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BD283E61A6E321B00625BB7 /* DinnerOrderTests.m */,
+				8BD283E41A6E321B00625BB7 /* Supporting Files */,
+			);
+			path = DinnerOrderTests;
+			sourceTree = "<group>";
+		};
+		8BD283E41A6E321B00625BB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BD283E51A6E321B00625BB7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D90686EB1093F1F705676E40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE1BBCD656C428E04E0B0C5B /* Pods.debug.xcconfig */,
+				21164FF5F64BD613C87290EA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BD283C61A6E321B00625BB7 /* DinnerOrder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD283EA1A6E321B00625BB7 /* Build configuration list for PBXNativeTarget "DinnerOrder" */;
+			buildPhases = (
+				6F051771FB8E6D22A30D9AB2 /* Check Pods Manifest.lock */,
+				8BD283C31A6E321B00625BB7 /* Sources */,
+				8BD283C41A6E321B00625BB7 /* Frameworks */,
+				8BD283C51A6E321B00625BB7 /* Resources */,
+				B49A4783CCE371BCBFB0FF0C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DinnerOrder;
+			productName = DinnerOrder;
+			productReference = 8BD283C71A6E321B00625BB7 /* DinnerOrder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8BD283DF1A6E321B00625BB7 /* DinnerOrderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BD283ED1A6E321B00625BB7 /* Build configuration list for PBXNativeTarget "DinnerOrderTests" */;
+			buildPhases = (
+				8BD283DC1A6E321B00625BB7 /* Sources */,
+				8BD283DD1A6E321B00625BB7 /* Frameworks */,
+				8BD283DE1A6E321B00625BB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BD283E21A6E321B00625BB7 /* PBXTargetDependency */,
+			);
+			name = DinnerOrderTests;
+			productName = DinnerOrderTests;
+			productReference = 8BD283E01A6E321B00625BB7 /* DinnerOrderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BD283BF1A6E321B00625BB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = BIS_developer;
+				TargetAttributes = {
+					8BD283C61A6E321B00625BB7 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					8BD283DF1A6E321B00625BB7 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 8BD283C61A6E321B00625BB7;
+					};
+				};
+			};
+			buildConfigurationList = 8BD283C21A6E321B00625BB7 /* Build configuration list for PBXProject "DinnerOrder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BD283BE1A6E321B00625BB7;
+			productRefGroup = 8BD283C81A6E321B00625BB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BD283C61A6E321B00625BB7 /* DinnerOrder */,
+				8BD283DF1A6E321B00625BB7 /* DinnerOrderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BD283C51A6E321B00625BB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD283D61A6E321B00625BB7 /* Main.storyboard in Resources */,
+				8BD283DB1A6E321B00625BB7 /* LaunchScreen.xib in Resources */,
+				8BD283D81A6E321B00625BB7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD283DE1A6E321B00625BB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F051771FB8E6D22A30D9AB2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B49A4783CCE371BCBFB0FF0C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BD283C31A6E321B00625BB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD283F51A6E46B100625BB7 /* Util.m in Sources */,
+				8BD283F81A6E4C8A00625BB7 /* RoomListViewController.m in Sources */,
+				8BD283F21A6E45D100625BB7 /* LoginViewController.m in Sources */,
+				8BD283D31A6E321B00625BB7 /* ViewController.m in Sources */,
+				8BD283D01A6E321B00625BB7 /* AppDelegate.m in Sources */,
+				8BD283FB1A6E4E4800625BB7 /* Room.m in Sources */,
+				8BD283CD1A6E321B00625BB7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BD283DC1A6E321B00625BB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BD283E71A6E321B00625BB7 /* DinnerOrderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BD283E21A6E321B00625BB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BD283C61A6E321B00625BB7 /* DinnerOrder */;
+			targetProxy = 8BD283E11A6E321B00625BB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8BD283D41A6E321B00625BB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD283D51A6E321B00625BB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8BD283D91A6E321B00625BB7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BD283DA1A6E321B00625BB7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BD283E81A6E321B00625BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8BD283E91A6E321B00625BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BD283EB1A6E321B00625BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE1BBCD656C428E04E0B0C5B /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DinnerOrder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8BD283EC1A6E321B00625BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21164FF5F64BD613C87290EA /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DinnerOrder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8BD283EE1A6E321B00625BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DinnerOrderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DinnerOrder.app/DinnerOrder";
+			};
+			name = Debug;
+		};
+		8BD283EF1A6E321B00625BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DinnerOrderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DinnerOrder.app/DinnerOrder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BD283C21A6E321B00625BB7 /* Build configuration list for PBXProject "DinnerOrder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD283E81A6E321B00625BB7 /* Debug */,
+				8BD283E91A6E321B00625BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD283EA1A6E321B00625BB7 /* Build configuration list for PBXNativeTarget "DinnerOrder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD283EB1A6E321B00625BB7 /* Debug */,
+				8BD283EC1A6E321B00625BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BD283ED1A6E321B00625BB7 /* Build configuration list for PBXNativeTarget "DinnerOrderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BD283EE1A6E321B00625BB7 /* Debug */,
+				8BD283EF1A6E321B00625BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BD283BF1A6E321B00625BB7 /* Project object */;
+}
