@@ -12,6 +12,12 @@
 @interface RoomListViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
     NSMutableArray *roomList;
+    
+    UIView *orderInfoView;
+    UILabel *lbSelectRoom;
+    Room *selectRoom;
+    
+    UIActivityIndicatorView *waitView;
 }
 @property (strong, nonatomic) IBOutlet UITableView *tv_room;
 
@@ -42,17 +48,73 @@
     if (cell == nil)
     {
         cell = [[RoomTableCell alloc] initWithFrame:CGRectMake(0, 0, MAIN_SCREEN_WIDTH, 50)];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     [(RoomTableCell *)cell setRoomInfo:[roomList objectAtIndex:indexPath.row]];
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (selectRoom == nil)
+    {
+        [UIView beginAnimations:@"" context:nil];
+        [UIView setAnimationDelay:0.3];
+        CGRect rect = orderInfoView.frame;
+        rect.origin.y = MAIN_SCREEN_HTIGHT - rect.size.height;
+        [orderInfoView setFrame:rect];
+        [UIView commitAnimations];
+    }
+    
+    for (UITableViewCell *cell in tableView.visibleCells)
+    {
+        if (cell == [tableView cellForRowAtIndexPath:indexPath])
+        {
+             [cell  setBackgroundColor:[UIColor colorWithRed:0.512 green:0.853 blue:1.000 alpha:1.000]];
+        }
+        else
+        {
+            [cell setBackgroundColor: [UIColor whiteColor]];
+        }
+    }
+    
+    selectRoom = [roomList objectAtIndex:indexPath.row];
+    [lbSelectRoom setText:selectRoom.name];
+}
+
+-(void)okClick:(id)sender
+{
+    [Util SharedInstance].selectRoom = selectRoom;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    waitView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [waitView setCenter:CGPointMake(MAIN_SCREEN_WIDTH / 2, MAIN_SCREEN_HTIGHT / 2)];
+    [waitView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
+    [waitView startAnimating];
+    waitView.hidesWhenStopped = YES;
+    [self.view addSubview:waitView];
+    
     tv_room.delegate = self;
     tv_room.dataSource = self;
     roomList = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    orderInfoView = [[UIView alloc] initWithFrame:CGRectMake(0, MAIN_SCREEN_HTIGHT, MAIN_SCREEN_WIDTH, 50)];
+    lbSelectRoom = [[UILabel alloc] initWithFrame:CGRectMake(10, 15, 200, 20)];
+    UIButton *ensureButton = [[UIButton alloc] initWithFrame:CGRectMake(250, 15, 50, 20)];
+    [ensureButton addTarget:self action:@selector(okClick:) forControlEvents:UIControlEventTouchUpInside];
+    [ensureButton setTitle:@"确定" forState:UIControlStateNormal];
+    [ensureButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [ensureButton setBackgroundColor:[UIColor colorWithRed:0.726 green:0.446 blue:0.882 alpha:1.000]];
+    [orderInfoView addSubview:ensureButton];
+    [orderInfoView addSubview:lbSelectRoom];
+    [self.view addSubview:orderInfoView];
+    [orderInfoView setBackgroundColor:[UIColor colorWithRed:0.512 green:0.853 blue:1.000 alpha:1.000]];
     
     [[Util SharedInstance].httpManager POST:@"http://192.168.99.215:8080/servers/roomlist"
            parameters:@{@"name":@"rendl", @"password":@"1234"}
@@ -64,17 +126,19 @@
                   for (NSDictionary *item in roomArray)
                   {
                       Room *room = [[Room alloc] init];
-                      room.tid = ((NSNumber *)[item objectForKey:@"id"]).integerValue;
+                      room.tid = ((NSNumber *)[item objectForKey:@"id"]).intValue;
                       room.name = [item objectForKey:@"name"];
                       room.peroncount = [item objectForKey:@"personcount"];
                       room.tablecount = [item objectForKey:@"tablecount"];
                       room.remark = [item objectForKey:@"mark"];
                       [roomList addObject:room];
                   }
+                  [waitView stopAnimating];
                   [tv_room reloadData];
               }
               failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                   NSLog(@"%@", [error localizedDescription]);
+                  [waitView stopAnimating];
               }];
 }
 

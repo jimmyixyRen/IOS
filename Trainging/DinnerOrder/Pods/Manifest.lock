@@ -20,11 +20,23 @@ PODS:
   - AFNetworking/UIKit (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - ZXingObjC (3.0.3):
+    - ZXingObjC/All (= 3.0.3)
+  - ZXingObjC/All (3.0.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - FMDB
+  - ZXingObjC (~> 3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
+  FMDB: 0efa188cf0dd1ce82c27a478cd5f5fa245308677
+  ZXingObjC: 1eebdf4334b7de660ae42ddd23bd97b6d777b07d
 
 COCOAPODS: 0.35.0

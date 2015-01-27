@@ -36,6 +36,9 @@
                       [Util SharedInstance].userid = [dict objectForKey:@"id"];
                       [Util SharedInstance].username = tf_name.text;
                       [self.navigationController popViewControllerAnimated:YES];
+                      
+                      [[Util SharedInstance] saveValueToProfile:tf_name.text key:DEFAULT_LOGIN_NAME];
+                      [[Util SharedInstance] saveValueToProfile:tf_pwd.text key:DEFAULT_LOGIN_PWD];
                   }
                   failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                       NSLog(@"%@", [error localizedDescription]);
@@ -48,9 +51,17 @@
     }
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSString *name = [[Util SharedInstance] getValueFromProfileByKey:DEFAULT_LOGIN_NAME];
+    NSString *pwd = [[Util SharedInstance] getValueFromProfileByKey:DEFAULT_LOGIN_PWD];
+    
+    if (name != nil && pwd != nil)
+    {
+        tf_name.text = name;
+        tf_pwd.text = pwd;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

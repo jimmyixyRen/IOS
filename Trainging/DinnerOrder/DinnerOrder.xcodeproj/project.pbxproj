@@ -18,6 +18,9 @@
 		8BD283F51A6E46B100625BB7 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283F41A6E46B100625BB7 /* Util.m */; };
 		8BD283F81A6E4C8A00625BB7 /* RoomListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283F71A6E4C8A00625BB7 /* RoomListViewController.m */; };
 		8BD283FB1A6E4E4800625BB7 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD283FA1A6E4E4800625BB7 /* Room.m */; };
+		8BD284051A70D47C00625BB7 /* OrderOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD284041A70D47C00625BB7 /* OrderOptionViewController.m */; };
+		8BD284081A70D5AC00625BB7 /* FoodListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD284071A70D5AC00625BB7 /* FoodListViewController.m */; };
+		8BD2840B1A70D67800625BB7 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD2840A1A70D67800625BB7 /* Food.m */; };
 		DB16CA58114F8EFB0A051D1D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8E98B6D117EF292BF12362 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,14 @@
 		8BD283F71A6E4C8A00625BB7 /* RoomListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomListViewController.m; sourceTree = "<group>"; };
 		8BD283F91A6E4E4800625BB7 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
 		8BD283FA1A6E4E4800625BB7 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		8BD283FC1A6FA27900625BB7 /* DinnerOrder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DinnerOrder.entitlements; sourceTree = "<group>"; };
+		8BD284031A70D47C00625BB7 /* OrderOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderOptionViewController.h; sourceTree = "<group>"; };
+		8BD284041A70D47C00625BB7 /* OrderOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderOptionViewController.m; sourceTree = "<group>"; };
+		8BD284061A70D5AC00625BB7 /* FoodListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodListViewController.h; sourceTree = "<group>"; };
+		8BD284071A70D5AC00625BB7 /* FoodListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodListViewController.m; sourceTree = "<group>"; };
+		8BD284091A70D67800625BB7 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		8BD2840A1A70D67800625BB7 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		8BD452BF1A70F3EB00900793 /* DinnerOrderPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DinnerOrderPrefixHeader.pch; sourceTree = "<group>"; };
 		CE1BBCD656C428E04E0B0C5B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,18 +119,14 @@
 		8BD283C91A6E321B00625BB7 /* DinnerOrder */ = {
 			isa = PBXGroup;
 			children = (
-				8BD283F91A6E4E4800625BB7 /* Room.h */,
-				8BD283FA1A6E4E4800625BB7 /* Room.m */,
-				8BD283F31A6E46B100625BB7 /* Util.h */,
-				8BD283F41A6E46B100625BB7 /* Util.m */,
-				8BD283F61A6E4C8A00625BB7 /* RoomListViewController.h */,
-				8BD283F71A6E4C8A00625BB7 /* RoomListViewController.m */,
-				8BD283F01A6E45D100625BB7 /* LoginViewController.h */,
-				8BD283F11A6E45D100625BB7 /* LoginViewController.m */,
+				8BD284111A70DA6200625BB7 /* 工具类 */,
+				8BD284101A70DA5600625BB7 /* model */,
+				8BD2840F1A70DA4B00625BB7 /* 三级页面 */,
+				8BD2840E1A70D9EA00625BB7 /* 二级页面 */,
+				8BD2840D1A70D9DB00625BB7 /* 一级页面 */,
+				8BD283FC1A6FA27900625BB7 /* DinnerOrder.entitlements */,
 				8BD283CE1A6E321B00625BB7 /* AppDelegate.h */,
 				8BD283CF1A6E321B00625BB7 /* AppDelegate.m */,
-				8BD283D11A6E321B00625BB7 /* ViewController.h */,
-				8BD283D21A6E321B00625BB7 /* ViewController.m */,
 				8BD283D41A6E321B00625BB7 /* Main.storyboard */,
 				8BD283D71A6E321B00625BB7 /* Images.xcassets */,
 				8BD283D91A6E321B00625BB7 /* LaunchScreen.xib */,
@@ -133,6 +140,7 @@
 			children = (
 				8BD283CB1A6E321B00625BB7 /* Info.plist */,
 				8BD283CC1A6E321B00625BB7 /* main.m */,
+				8BD452BF1A70F3EB00900793 /* DinnerOrderPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +160,57 @@
 				8BD283E51A6E321B00625BB7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BD2840D1A70D9DB00625BB7 /* 一级页面 */ = {
+			isa = PBXGroup;
+			children = (
+				8BD283D11A6E321B00625BB7 /* ViewController.h */,
+				8BD283D21A6E321B00625BB7 /* ViewController.m */,
+			);
+			name = "一级页面";
+			sourceTree = "<group>";
+		};
+		8BD2840E1A70D9EA00625BB7 /* 二级页面 */ = {
+			isa = PBXGroup;
+			children = (
+				8BD283F01A6E45D100625BB7 /* LoginViewController.h */,
+				8BD283F11A6E45D100625BB7 /* LoginViewController.m */,
+				8BD284031A70D47C00625BB7 /* OrderOptionViewController.h */,
+				8BD284041A70D47C00625BB7 /* OrderOptionViewController.m */,
+			);
+			name = "二级页面";
+			sourceTree = "<group>";
+		};
+		8BD2840F1A70DA4B00625BB7 /* 三级页面 */ = {
+			isa = PBXGroup;
+			children = (
+				8BD284061A70D5AC00625BB7 /* FoodListViewController.h */,
+				8BD284071A70D5AC00625BB7 /* FoodListViewController.m */,
+				8BD283F61A6E4C8A00625BB7 /* RoomListViewController.h */,
+				8BD283F71A6E4C8A00625BB7 /* RoomListViewController.m */,
+			);
+			name = "三级页面";
+			sourceTree = "<group>";
+		};
+		8BD284101A70DA5600625BB7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8BD284091A70D67800625BB7 /* Food.h */,
+				8BD2840A1A70D67800625BB7 /* Food.m */,
+				8BD283F91A6E4E4800625BB7 /* Room.h */,
+				8BD283FA1A6E4E4800625BB7 /* Room.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		8BD284111A70DA6200625BB7 /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				8BD283F31A6E46B100625BB7 /* Util.h */,
+				8BD283F41A6E46B100625BB7 /* Util.m */,
+			);
+			name = "工具类";
 			sourceTree = "<group>";
 		};
 		D90686EB1093F1F705676E40 /* Pods */ = {
@@ -214,6 +273,12 @@
 				TargetAttributes = {
 					8BD283C61A6E321B00625BB7 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = EPMWFD6BVR;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					8BD283DF1A6E321B00625BB7 = {
 						CreatedOnToolsVersion = 6.1;
@@ -300,7 +365,10 @@
 			files = (
 				8BD283F51A6E46B100625BB7 /* Util.m in Sources */,
 				8BD283F81A6E4C8A00625BB7 /* RoomListViewController.m in Sources */,
+				8BD284051A70D47C00625BB7 /* OrderOptionViewController.m in Sources */,
+				8BD284081A70D5AC00625BB7 /* FoodListViewController.m in Sources */,
 				8BD283F21A6E45D100625BB7 /* LoginViewController.m in Sources */,
+				8BD2840B1A70D67800625BB7 /* Food.m in Sources */,
 				8BD283D31A6E321B00625BB7 /* ViewController.m in Sources */,
 				8BD283D01A6E321B00625BB7 /* AppDelegate.m in Sources */,
 				8BD283FB1A6E4E4800625BB7 /* Room.m in Sources */,
@@ -427,9 +495,14 @@
 			baseConfigurationReference = CE1BBCD656C428E04E0B0C5B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DinnerOrder/DinnerOrderPrefixHeader.pch;
 				INFOPLIST_FILE = DinnerOrder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -438,9 +511,14 @@
 			baseConfigurationReference = 21164FF5F64BD613C87290EA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DinnerOrder/DinnerOrderPrefixHeader.pch;
 				INFOPLIST_FILE = DinnerOrder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
