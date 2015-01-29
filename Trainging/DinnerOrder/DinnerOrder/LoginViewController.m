@@ -35,6 +35,7 @@
                       [Util SharedInstance].isLogined = YES;
                       [Util SharedInstance].userid = [dict objectForKey:@"id"];
                       [Util SharedInstance].username = tf_name.text;
+                      [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFY_LOGIN object:[Util SharedInstance].username];
                       [self.navigationController popViewControllerAnimated:YES];
                       
                       [[Util SharedInstance] saveValueToProfile:tf_name.text key:DEFAULT_LOGIN_NAME];

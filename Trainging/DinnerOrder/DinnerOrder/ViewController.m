@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "Util.h"
-
 #import <ZXingObjC.h>
 
 @interface ViewController ()<ZXCaptureDelegate, UIAlertViewDelegate>
@@ -20,14 +19,13 @@
     BOOL isScaned;
     NSTimer *timer;
 }
-@property (strong, nonatomic) IBOutlet UILabel *lb_welcome;
-@property (strong, nonatomic) IBOutlet UIButton *bt_login;
 @property (strong, nonatomic) IBOutlet UIView *scanRectView;
 @property (nonatomic, strong)ZXCapture *capture;
 @end
 
+
 @implementation ViewController
-@synthesize lb_welcome, bt_login, scanRectView;
+@synthesize  scanRectView;
 - (IBAction)scanOK:(id)sender {
     UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"OrderOptionViewController"];
     [self.navigationController pushViewController:vc animated:YES];
@@ -36,32 +34,10 @@
     isScaned = YES;
 }
 
-- (IBAction)loginClick:(id)sender
-{
-    if (bt_login.tag == 0)
-    {
-        UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        [self.navigationController pushViewController:vc animated:YES];
-        self.navigationController.navigationBar.hidden = NO;
-    }
-    else
-    {
-        [bt_login setTitle:@"登录" forState:UIControlStateNormal];
-        bt_login.tag = 0;
-    }
-}
-
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBar.hidden = YES;
-    if ([Util SharedInstance].isLogined)
-    {
-        lb_welcome.text = [NSString stringWithFormat:@"%@ 欢迎你", [Util SharedInstance].username];
-        [bt_login setTitle:@"注销" forState:UIControlStateNormal];
-        bt_login.tag = 1;
-    }
     
     if ([Util SharedInstance].orderUUID != nil)
     {
@@ -130,8 +106,13 @@
                                                                      self.capture.delegate = self;
                                                                      isScaned = NO;
                                                                      [[Util SharedInstance].foodList removeAllObjects];
+                                                                     
+                                                                     [[Util SharedInstance] updateOneOrderByOrderID:[Util SharedInstance].orderUUID deal:@"-1"];
+                                                                     
                                                                      [Util SharedInstance].orderUUID = nil;
                                                                      [Util SharedInstance].selectRoom = nil;
+                                                                     
+                                                                     
                                                                  }];
                                             }
                                         }

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-RESideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ZXingObjC.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>688718DBB05F1E556BD469B9</key>
+		<key>2B23585A9E7EDA84A9032C32</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69B33B0AC511FF9B97735A7A</key>
+		<key>55F78C31C32A37F797337E1F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0286B499E1BDBBEC2864D74</key>
+		<key>5E3EBE463C5B4D3906116CE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC0229448B5EAA83123370EF</key>
+		<key>856EF219EEF95258B995CF85</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>968E62C075A38A22CECE7503</key>
 		<dict>
 			<key>primary</key>
 			<true/>

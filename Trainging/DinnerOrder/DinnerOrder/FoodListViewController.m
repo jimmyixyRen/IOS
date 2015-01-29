@@ -182,6 +182,7 @@
     [super viewDidLoad];
     tvFood.delegate = self;
     tvFood.dataSource = self;
+    tvFood.tableFooterView = [[UIView alloc] init];
     foodList = [[NSMutableArray alloc] initWithCapacity:0];
     selectFoodList = [Util SharedInstance].foodList;
     selectViewArray = [[NSMutableArray alloc] initWithCapacity:0];

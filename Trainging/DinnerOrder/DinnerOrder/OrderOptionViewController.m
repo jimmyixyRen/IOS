@@ -8,6 +8,7 @@
 
 #import "OrderOptionViewController.h"
 #import "Food.h"
+#import <FMDB.h>
 
 @interface OrderOptionViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *tf_order_name;
@@ -63,10 +64,14 @@
         default://确认排队
         {
             NSMutableArray *foodIdArray = [[NSMutableArray alloc] initWithCapacity:0];
+            NSMutableString *foodNameStr = [[NSMutableString alloc] initWithCapacity:0];
             for (Food *item in [Util SharedInstance].foodList)
             {
                 [foodIdArray addObject:[NSString stringWithFormat:@"%@", item.fid]];
+                [foodNameStr appendFormat:@"%@,", item.name];
             }
+            [foodNameStr deleteCharactersInRange:NSMakeRange(foodNameStr.length - 1, 1)];
+            
             [[Util SharedInstance].httpManager POST:@"http://192.168.99.215:8080/servers/orderroom"
                                          parameters:@{@"orderroomid":[NSString stringWithFormat:@"%d",[Util SharedInstance].selectRoom.tid],
                                                       @"ordername":_tf_order_name.text,
@@ -82,6 +87,11 @@
                                                     [Util SharedInstance].orderPreCount =((NSString *)[retDict objectForKey:@"precount"]).intValue;
                                                     [Util SharedInstance].orderLeftMinutes = ((NSString *)[retDict objectForKey:@"lefttime"]).intValue;
                                                     retDict = nil;
+                                                    
+                                                    [[Util SharedInstance] insertOneOrder:@""
+                                                                                 roomName:_tf_order_name.text
+                                                                              personCount:_tf_order_count.text];
+                                                    
                                                     [self.navigationController popViewControllerAnimated:YES];
                                                 }
                                                 

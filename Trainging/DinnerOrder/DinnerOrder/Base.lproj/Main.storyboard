@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1qs-f9-wPu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Bav-3Z-0df">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="1789" y="342"/>
         </scene>
-        <!--View Controller-->
+        <!--订餐-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstViewController" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -85,28 +85,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqO-8x-dGh">
-                                <rect key="frame" x="229" y="28" width="75" height="30"/>
-                                <color key="backgroundColor" red="0.050980392156862744" green="0.37254901960784315" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="登录">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g6t-Oy-OXK"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="游客欢迎你" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSK-QA-oT8">
-                                <rect key="frame" x="101" y="32" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xBN-1C-nYG">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e98-mn-6Nf">
+                                <rect key="frame" x="100" y="10" width="100" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vD-3M-qsY">
-                                <rect key="frame" x="109" y="85" width="96" height="30"/>
+                                <rect key="frame" x="112" y="92" width="96" height="30"/>
                                 <state key="normal" title="扫描成功">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -114,10 +101,6 @@
                                     <action selector="scanOK:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VSC-tk-UH9"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e98-mn-6Nf">
-                                <rect key="frame" x="100" y="10" width="100" height="100"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -126,12 +109,15 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="Z0e-ID-0LE"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" title="订餐" id="Z0e-ID-0LE">
+                        <barButtonItem key="leftBarButtonItem" title="菜单" id="c4j-aV-Hou">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="vXZ-lx-hvc" id="egz-ZT-RHd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="bt_login" destination="ZqO-8x-dGh" id="GVX-zs-jQr"/>
-                        <outlet property="lb_welcome" destination="DSK-QA-oT8" id="rDb-qp-Vr6"/>
                         <outlet property="scanRectView" destination="xBN-1C-nYG" id="g8X-z2-QK1"/>
                     </connections>
                 </viewController>
@@ -334,7 +320,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ncJ-hs-TYI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1qs-f9-wPu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="contentViewController" automaticallyAdjustsScrollViewInsets="NO" id="1qs-f9-wPu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nFQ-NC-HSk">
@@ -349,6 +335,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pba-Aa-hbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404" y="408"/>
+        </scene>
+        <!--Left Menu View Controller-->
+        <scene sceneID="DCx-J9-Iih">
+            <objects>
+                <viewController restorationIdentifier="LeftMenuViewController" storyboardIdentifier="LeftMenuViewController" id="ODc-jk-O17" customClass="LeftMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b6n-sU-tgI"/>
+                        <viewControllerLayoutGuide type="bottom" id="LrO-te-ezp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xhS-40-Xt3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GfS-ao-OxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="987"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="p95-k7-cui">
+            <objects>
+                <viewController storyboardIdentifier="rootController" id="Bav-3Z-0df" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mdZ-7R-cAJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fFa-Xl-NsB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tku-xf-391">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yEi-rt-Bnq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="408"/>
+        </scene>
+        <!--Order History Table View Controller-->
+        <scene sceneID="KtZ-bu-ScI">
+            <objects>
+                <tableViewController storyboardIdentifier="OrderHistoryTableViewController" id="Azx-mf-jUv" customClass="OrderHistoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KlT-aw-7NA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="OrD-N9-Gvx">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OrD-N9-Gvx" id="Quf-m6-ONC">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Azx-mf-jUv" id="bUo-hK-pjY"/>
+                            <outlet property="delegate" destination="Azx-mf-jUv" id="BZF-L4-DKE"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOP-ON-8dE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="1089"/>
         </scene>
     </scenes>
 </document>
